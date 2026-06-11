@@ -1,0 +1,36 @@
+server:
+  port: ${SERVER_PORT:4005}
+
+spring:
+  application:
+    name: agendamento-api
+
+  datasource:
+    url: ${DB_URL:jdbc:mysql://edumysql.acesso.rj.senac.br:3306/20261_prjint3_manha_ruimarsilvano?useSSL=false&serverTimezone=America/Sao_Paulo&allowPublicKeyRetrieval=true&characterEncoding=latin1}
+    username: 20261_prjint3_manha
+    password: senac@13465
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+    show-sql: false
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+    tags-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
