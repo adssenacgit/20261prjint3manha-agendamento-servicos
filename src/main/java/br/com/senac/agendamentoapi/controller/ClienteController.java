@@ -9,12 +9,14 @@ import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/clientes")
 @Tag(name = "Clientes")
+@CrossOrigin("*")    
 public class ClienteController {
 
     private final ClienteService service;
