@@ -14,7 +14,6 @@ public final class HorarioDisponivelMapper {
                 horario.getData(),
                 horario.getInicio(),
                 horario.getFim(),
-                horario.getSituacao(),
                 horario.getStatus(),
                 horario.getFuncionario().getId(),
                 horario.getFuncionario().getNome()

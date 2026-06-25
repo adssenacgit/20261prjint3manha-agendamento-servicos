@@ -1,6 +1,5 @@
 package br.com.senac.agendamentoapi.dto;
 
-import br.com.senac.agendamentoapi.model.AgendamentoSituacao;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -10,7 +9,6 @@ public record AgendamentoResponse(
         LocalTime horarioInicio,
         LocalTime horarioFim,
         String observacoes,
-        AgendamentoSituacao situacao,
         Integer status,
         Integer servicoId,
         String servicoNome,

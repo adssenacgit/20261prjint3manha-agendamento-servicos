@@ -82,9 +82,6 @@ public class AgendamentoService {
         agendamento.setHorarioInicio(request.horarioInicio());
         agendamento.setHorarioFim(request.horarioFim());
         agendamento.setObservacoes(request.observacoes());
-        if (request.situacao() != null || agendamento.getSituacao() == null) {
-            agendamento.setSituacao(request.situacao() == null ? AgendamentoSituacao.PENDENTE : request.situacao());
-        }
         agendamento.setServico(servico);
         agendamento.setHorarioDisponivel(horario);
         agendamento.setCliente(cliente);

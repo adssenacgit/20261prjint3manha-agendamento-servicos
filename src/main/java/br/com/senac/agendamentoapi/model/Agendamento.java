@@ -25,10 +25,6 @@ public class Agendamento {
     @Column(name = "agendamento_observacoes", columnDefinition = "TEXT")
     private String observacoes;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "agendamento_situacao", nullable = false, length = 20)
-    private AgendamentoSituacao situacao;
-
     @Column(name = "agendamento_status", nullable = false)
     private Integer status;
 
@@ -54,8 +50,6 @@ public class Agendamento {
     public void setHorarioFim(LocalTime horarioFim) { this.horarioFim = horarioFim; }
     public String getObservacoes() { return observacoes; }
     public void setObservacoes(String observacoes) { this.observacoes = observacoes; }
-    public AgendamentoSituacao getSituacao() { return situacao; }
-    public void setSituacao(AgendamentoSituacao situacao) { this.situacao = situacao; }
     public Integer getStatus() { return status; }
     public void setStatus(Integer status) { this.status = status; }
     public Servico getServico() { return servico; }

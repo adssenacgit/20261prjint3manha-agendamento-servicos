@@ -22,10 +22,6 @@ public class HorarioDisponivel {
     @Column(name = "horario_disponivel_fim", nullable = false)
     private LocalTime fim;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "horario_disponivel_situacao", nullable = false, length = 20)
-    private HorarioDisponivelSituacao situacao;
-
     @Column(name = "horario_disponivel_status", nullable = false)
     private Integer status;
 
@@ -41,8 +37,6 @@ public class HorarioDisponivel {
     public void setInicio(LocalTime inicio) { this.inicio = inicio; }
     public LocalTime getFim() { return fim; }
     public void setFim(LocalTime fim) { this.fim = fim; }
-    public HorarioDisponivelSituacao getSituacao() { return situacao; }
-    public void setSituacao(HorarioDisponivelSituacao situacao) { this.situacao = situacao; }
     public Integer getStatus() { return status; }
     public void setStatus(Integer status) { this.status = status; }
     public Funcionario getFuncionario() { return funcionario; }

@@ -15,7 +15,6 @@ public final class AgendamentoMapper {
                 agendamento.getHorarioInicio(),
                 agendamento.getHorarioFim(),
                 agendamento.getObservacoes(),
-                agendamento.getSituacao(),
                 agendamento.getStatus(),
                 agendamento.getServico().getId(),
                 agendamento.getServico().getNome(),

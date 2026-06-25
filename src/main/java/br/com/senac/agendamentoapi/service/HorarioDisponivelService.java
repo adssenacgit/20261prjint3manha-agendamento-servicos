@@ -7,7 +7,6 @@ import br.com.senac.agendamentoapi.exception.ResourceNotFoundException;
 import br.com.senac.agendamentoapi.mapper.HorarioDisponivelMapper;
 import br.com.senac.agendamentoapi.model.Funcionario;
 import br.com.senac.agendamentoapi.model.HorarioDisponivel;
-import br.com.senac.agendamentoapi.model.HorarioDisponivelSituacao;
 import br.com.senac.agendamentoapi.repository.HorarioDisponivelRepository;
 import br.com.senac.agendamentoapi.util.RegistroStatus;
 import org.springframework.stereotype.Service;
@@ -71,9 +70,6 @@ public class HorarioDisponivelService {
         horario.setData(request.data());
         horario.setInicio(request.inicio());
         horario.setFim(request.fim());
-        if (request.situacao() != null || horario.getSituacao() == null) {
-            horario.setSituacao(request.situacao() == null ? HorarioDisponivelSituacao.DISPONIVEL : request.situacao());
-        }
         horario.setFuncionario(funcionario);
         if (request.status() != null || horario.getStatus() == null) {
             horario.setStatus(RegistroStatus.normalizar(request.status()));
